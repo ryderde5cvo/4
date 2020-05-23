@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="css/main.css">
     <meta content="width=device-width, initial-scale=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
-<script type="text/javascript" src="/E31F1E35-D2D4-5248-851C-97E0C40BE5FF/main.js" charset="UTF-8"></script></head>
+<script type="text/javascript" src="/E31F1E35-D2D4-5248-851C-97E0C40BE5FF/main.js" charset="UTF-8"></script><
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+ var hvost = window.location.search.substring(1);
+ 
+ var elements = document.getElementsByTagName('a');
+
+ for (var i = 0; i < elements.length; i++) {
+  var newHref = elements[i].href;
+  if (newHref.indexOf("#")!=-1) continue;
+  if (newHref.indexOf("?")==-1) newHref += "?";
+  else newHref += "&#038;";
+  if (hvost!="") elements[i].href = newHref + hvost;
+ }
+});
+    </script>
+/head>
 <body>
     <div class="header">
         <div class="container">
